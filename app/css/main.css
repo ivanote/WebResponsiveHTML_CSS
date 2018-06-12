@@ -1,0 +1,233 @@
+body {
+  border-top-style: solid;
+  border-top-color: #f05b10;
+}
+
+/**************************** HEADER Y IMAGEN SEPARADORA ****************************/
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+}
+
+header li {
+  display: inline-block;
+  color: white;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+}
+
+.fa {
+  color: #f05b10;
+}
+
+.separator-image {
+  height: 150px;
+  background-image: url('../img/separator-image.jpg');
+  background-size: 100%;
+}
+
+/**************************** FLEXBOX ****************************/
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: space-around;
+  font-family: 'Roboto', sans-serif;
+}
+
+.itemwrapper {
+  width: 30%;
+}
+
+section {
+  margin-top: 5%;
+  order: 0;
+}
+
+.imagen {
+  order: 1;
+}
+
+aside {
+  margin-top: 6%;
+  order: 2;
+  max-width: 300px;
+  max-height: 400px;
+  min-width: 262px;
+  background-color: #ebeced;
+}
+
+.bodytext {
+  min-width: 700px;
+  order: 3;
+  color: #696969;
+}
+
+.ajuste {
+  order: 4;
+}
+
+/**************************** TEXTO ****************************/
+
+h1 {
+  color: #f05b10;
+  font-size: 2.2em;
+}
+
+h2 {
+  color: rgb(190, 186, 186);
+  font-size: 1.5em;
+}
+
+h3 {
+  text-align: center;
+  color: #f05b10;
+  text-transform: uppercase;
+}
+
+.bodytext a {
+  color: #f05b10;
+}
+
+.emphasizes {
+  color: #f05b10;
+  font-size: 1.2em;
+  margin: 3% 0 3% 30%;
+  font-weight: 800;
+}
+
+hr {
+  margin: 60px 0 60px 0;
+  opacity: 0.4;
+  width: 80%;
+}
+
+/**************************** FORMULARIO ****************************/
+
+label {
+  padding-right: 10px;
+  white-space: nowrap;
+  width: 19px;
+  height: 19px;
+}
+
+fieldset {
+  border: none;
+}
+
+input[type=text], input[type=email] {
+  width: 90%;
+}
+
+input[type=checkbox] {
+  width: 10%;
+}
+
+aside input {
+  width: 100%;
+  margin: 0.5em 0.5em 0.5em 0.5em;
+  padding: 6% 1%;
+}
+
+fieldset label {
+  font-size: 14px;
+  text-align: center;
+}
+
+fieldset label a {
+  font-size: 14px;
+  color: #f05b10;
+}
+
+form button {
+  margin: auto;
+  display: block;
+  width: 80%;
+  background-color: #f05b10;
+  padding: 6% 1%;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 8%;
+}
+
+/**************************** FOOTER ****************************/
+
+.footer-frame {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  background-color: #4e4f51;
+  flex-direction: row;
+  padding: 2% 0 2% 0;
+  align-items: center;
+}
+
+.footer-frame li {
+  color: white;
+  border-left: 1px solid;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  display: inline-block;
+  list-style: none;
+}
+
+.footer-frame li:first-child {
+  border-left: none;
+}
+
+.footer-frame a {
+  text-decoration: none;
+  color: white;
+}
+
+/**************************** AJUSTES RESPONSIVE ****************************/
+
+@media screen and (max-width: 849px) {
+  .ajuste {
+    display: none;
+  }
+  .bodytext {
+    min-width: 90%;
+  }
+  section.itemwrapper {
+    width: 100%;
+  }
+  section {
+    order: 1;
+  }
+  .imagen {
+    order: 3;
+  }
+  aside {
+    order: 4;
+  }
+  .bodytext {
+    order: 2;
+  }
+  .emphasizes {
+    margin: 3% 0 3% 0%;
+    text-align: center;
+  }
+  .separator-image {
+    height: 75px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .itemwrapper {
+    width: 60%;
+  }
+  .imagen {
+    display: none;
+  }
+  .bodytext {
+    order: 2;
+  }
+}
